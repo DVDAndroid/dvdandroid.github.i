@@ -1,0 +1,85 @@
+<!-- @formatter:off -->
+<!--
+    Settings -> Code Style -> General -> Formatter Control
+    DO NOT FORMAT CODE !!!
+ -->
+<apps>
+
+    <app>
+        <name>Update Checker</name>
+        <packagename>com.dvd.android.updatechecker</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/UpdateChecker.apk?raw=true</downloadlink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/UpdateChecker</github>
+        <type>app</type>
+        <icon>https://raw.githubusercontent.com/DVDAndroid/UpdateChecker/master/app/src/main/res/mipmap-xxhdpi/ic_launcher_settings_l.png</icon>
+        <langs>en, it</langs>
+        <versionname>5.2.2 - FINAL</versionname>
+        <versioncode>326</versioncode>
+        <minapi>19</minapi>
+        <targetapi>22</targetapi>
+    </app>
+    <app>
+        <name>Enable Ambient Display - Xposed</name>
+        <packagename>com.dvd.android.xposed.enableambientdisplay</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>http://dl-xda.xposed.info/modules/com.dvd.android.xposed.enableambientdisplay_v3_405aea.apk?raw=true</downloadlink>
+        <externallink>http://repo.xposed.info/module/com.dvd.android.xposed.enableambientdisplay</externallink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/Xposed-EnableAmbientDisplay</github>
+        <type>xposed-module</type>
+        <langs>it, en</langs>
+        <versionname>1.2</versionname>
+        <versioncode>3</versioncode>
+        <minapi>21</minapi>
+        <targetapi>21</targetapi>
+    </app>
+    <app>
+        <name>HTMLColorDecoder</name>
+        <packagename>com.dvd.android.example.htmlcolordecoder</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/HTMLColorDecoder.apk?raw=true</downloadlink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/HTMLColorDecoder</github>
+        <type>example-app</type>
+        <langs>en</langs>
+        <versionname>1.0</versionname>
+        <versioncode>1</versioncode>
+        <minapi>16</minapi>
+        <targetapi>22</targetapi>
+    </app>
+    <app>
+        <name>NotificationTest</name>
+        <packagename>com.dvd.android.example.notificationtest</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/NotificationTest.apk?raw=true</downloadlink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/NotificationTest</github>
+        <type>example-app</type>
+        <icon>https://raw.githubusercontent.com/DVDAndroid/NotificationTest/master/app/src/main/res/drawable-xxhdpi/ic_launcher.png</icon>
+        <langs>en</langs>
+        <versionname>1.0</versionname>
+        <versioncode>1</versioncode>
+        <minapi>16</minapi>
+        <targetapi>22</targetapi>
+    </app>
+
+    <!--
+    <app>
+        <name>Advanced Fake Shutdown</name>
+        <packagename>com.dvd.android.advanced_fake_shutdown</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/FakeShutdownAdvanced.apk?raw=true</downloadlink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/Fake-Shutdown-Advanced</github>
+        <type>app</type>
+        <icon>https://raw.githubusercontent.com/DVDAndroid/Fake-Shutdown-Advanced/master/app/src/main/res/drawable-xxhdpi/ic_launcher.png</icon>
+        <langs>it, en</langs>
+        <versionname>3.0</versionname>
+        <versioncode>7</versioncode>
+        <minapi>19</minapi>
+        <targetapi>21</targetapi>
+    </app>
+    -->
+</apps>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='css/webpage_app_style.css' rel='stylesheet' type='text/css'>
+	<link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection"/>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+	<meta name="theme-color" content="#4CAF50">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript"
+	        src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/showBottomCredits.js"></script>
+	<script type="text/javascript" src="xml/xmlHelper.js"></script>
+	<script type="text/javascript" src="src/ZeroClipboard.js"></script>
+	<script language="JavaScript">
+		var parameters = location.search.substring(1).split("&");
+		var temp = parameters[0].split("=");
+		var app_id = unescape(temp[1]);
+
+		switch (app_id) {
+			case "undefined":
+			case "":
+			case app_id < 0:
+			//TODO: change this number every new app
+			case  app_id > 3:
+			//TODO: change this number every new app
+			case isNaN(app_id):
+				document.title = "404 - Not Found | DVDAndroid";
+				window.location = "404_not_found.html";
+				break;
+			default:
+				document.title = getName(app_id) + " | DVDAndroid";
+		}
+		new ScrollSpy({
+			mode: 'horizontal',
+			container: window
+		});
+	</script>
+</head>
+<body class="green">
+<div class="my-container z-depth-3" style="background: white">
+	<div class="cover-container">
+		<script>document.write(getIcon(app_id, 0));</script>
+	</div>
+	<div class="info-box-top z-depth-1">
+		<h1 class="document-title">
+			<script>document.write(getName(app_id));</script>
+		</h1>
+	</div>
+	<table class="bordered hoverable"> <!-- responsive-table -->
+		<tr>
+			<td class="table_row">Name:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getName(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Package name:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getPackage_name(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">GitHub:</td>
+			<td>
+				<script>
+					if (getGithub(app_id) == "N/A") {
+						document.write('<a>N/A</a>');
+					} else {
+						document.write("<a class='tooltipped' data-position='right' data-delay='50' data-tooltip='View this project on GitHub!' href='" + getGithub(app_id) + "'>" + "Click here" + '</a>');
+					}
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">External link:</td>
+			<td>
+				<script>
+					if (getExternalLink(app_id) == "N/A") {
+						document.write('<a>N/A</a>');
+					} else {
+						document.write("<a href='" + getExternalLink(app_id) + "'>" + "Click here" + '</a>');
+					}
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Type:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getType(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Available languages:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getLangs(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Version name:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getVersion_name(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Version code:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getVersion_code(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Minimum Android API:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getMinApi(app_id))</script>
+			</td>
+		</tr>
+		<tr>
+			<td class="table_row">Target Android API:</td>
+			<td class="pointer-cursor">
+				<script>document.write(getTargetApi(app_id))</script>
+			</td>
+		</tr>
+	</table>
+	<a class="btn-floating btn-large waves-effect waves-light green.darken-2 tooltipped"
+	   data-position="top" data-delay="50" data-tooltip="Download" id="float_butt">
+		<script>
+			document.getElementById("float_butt").href = getDownload(app_id);
+		</script>
+		<i class="mdi-file-file-download"></i>
+	</a>
+</div>
+<div class="z-depth-2 bottom-div" id="bottom">
+	Powered by <a href="https://pages.github.com/">Github Pages</a>
+	<a href="https://github.com/DVDAndroid" style="padding-left: 5%">DVDAndroid</a>
+</div>
+<script type="text/javascript">
+	var client = new ZeroClipboard($('.textCopy'));
+
+	client.on('ready', function () {
+		client.on('copy', function (event) {
+			event.clipboardData.setData('text/plain', event.target.innerText);
+		});
+
+		client.on('aftercopy', function (event) {
+			Materialize.toast('Copied text to clipboard: ' + event.data['text/plain'], 4000);
+		});
+	});
+
+	client.on('error', function () {
+		ZeroClipboard.destroy();
+	});
+</script>
+<script type="text/javascript" src="js/showBottomCredits.js">checkBottomVisibility();</script>
+</body>
+</html>

@@ -1,6 +1,93 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h6>Hello World</h6>
+<head>
+	<link href='css/webpage_app_style.css' rel='stylesheet' type='text/css'>
+	<link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection"/>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+	<meta name="theme-color" content="#2196F3">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="xml/xmlHelper.js"></script>
+	<title>DVDAndroid</title>
+	<style>
+		td {
+			text-align: center;
+		}
+
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body class="blue">
+<div class="my-container z-depth-3" style="background: white">
+	<div style="font-size: 400%; font-weight: bolder; text-align: center">DVDANDROID webpage!</div>
+	<div style="font-size: 150%; text-align: center; padding-top: 4%; padding-bottom: 3%">
+		Hi! My name is Davide and I'm 16 years old. I'm Italian and i LOVE Android.
+		<br>I learned Java myself and I use it to develop Android apps.
+		<br>Other languages I know are: HTML, CSS, JavaScript and C.
+	</div>
+	<noscript class="red">
+		WARNING!! JAVASCRIPT IS NOT ENABLED!!
+	</noscript>
+	<div style="padding-bottom: 4%">
+		<h5 style="padding-left: 5%;padding-top: 3%">Here there are my Android apps:</h5>
+		<ul class="collapsible" data-collapsible="expandable"
+		    style="width: 50%;  margin: 0 auto; position: relative;">
+			<li>
+				<div class="collapsible-header waves-effect waves-light red">
+					<i class="mdi-image-filter-drama"></i>
+					<b>My apps</b>
+				</div>
+				<div class="collapsible-body">
+					<ul class="collection" id="collapsible-apps"></ul>
+				</div>
+		</ul>
+	</div>
+	<table>
+		<tr>
+			<td>
+				<a href="https://github.com/DVDAndroid">
+					<img src="https://cdn1.iconfinder.com/data/icons/simple-icons/1024/github-1024-black.png"
+					     title="My repo on GitHub!!">
+				</a>
+			</td>
+			<td>
+				<a href="http://forum.xda-developers.com/member.php?u=5345056">
+					<img src="http://ecx.images-amazon.com/images/I/41Z30iTlpcL._AA200_.png"
+					     title="My XDA-Developers account!!"/>
+				</a>
+			</td>
+			<td>
+				<a href="http://repo.xposed.info/users/dvdandroid">
+					<img src="https://avatars2.githubusercontent.com/u/1573299?v=3&s=460"
+					     title="My Xposed Module Repo account!!"/>
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="z-depth-2 bottom-div" id="bottom">
+	Powered by <a href="https://pages.github.com/">Github Pages</a>
+	<a href="https://github.com/DVDAndroid" style="padding-left: 5%">DVDAndroid</a>
+</div>
+<script>
+	var innerHTML, app = 0;
+	while (getName(app) != "undefined") {
+		innerHTML = "<li class='collection-item avatar pointer-cursor' " + "onclick=\"location.href=" + "'app.html?id=" + app + "'\">";
+		innerHTML += getIcon(app, 1);
+		innerHTML += "<span class='title'>";
+		innerHTML += "<b>" + getName(app) + "</b>";
+		innerHTML += "</span>";
+		innerHTML += "<p class='secondary-content'>More info... <i class='mdi-action-info'></i></p>";
+		innerHTML += "</li>";
+
+		document.getElementById("collapsible-apps").innerHTML += innerHTML;
+		app++;
+	}
+</script>
+<script type="text/javascript" src="js/showBottomCredits.js">checkBottomVisibility();</script>
 </body>
 </html>
