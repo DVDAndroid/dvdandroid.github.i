@@ -25,10 +25,18 @@
 <div class="my-container z-depth-3" style="background: white">
 	<div style="font-size: 400%; font-weight: bolder; text-align: center">DVDANDROID webpage!</div>
 	<div style="font-size: 150%; text-align: center; padding-top: 4%; padding-bottom: 3%">
-		Hi! My name is Davide and I'm 16 years old. I'm Italian and i LOVE Android.
+		Hi! My name is Davide and I'm <span id="age">15</span> years old. I'm Italian and i LOVE
+		Android.
 		<br>I learned Java myself and I use it to develop Android apps.
 		<br>Other languages I know are: HTML, CSS, JavaScript and C.
 	</div>
+	<script>
+		var birthday = new Date("11/30/1999"); // it isn't my true birthday.
+		var today = new Date();
+		var years = today.getFullYear() - birthday.getFullYear() - 1;
+		birthday.setFullYear(today.getFullYear());
+		document.getElementById("age").innerText = years;
+	</script>
 	<noscript class="red">
 		WARNING!! JAVASCRIPT IS NOT ENABLED!!
 	</noscript>

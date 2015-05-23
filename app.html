@@ -23,7 +23,7 @@
 			case "":
 			case app_id < 0:
 			//TODO: change this number every new app
-			case  app_id > 3:
+			case  app_id > 4:
 			//TODO: change this number every new app
 			case isNaN(app_id):
 				document.title = "404 - Not Found | DVDAndroid";
@@ -40,6 +40,9 @@
 </head>
 <body class="green">
 <div class="my-container z-depth-3" style="background: white">
+	<noscript class="red">
+		WARNING!! JAVASCRIPT IS NOT ENABLED!!
+	</noscript>
 	<div class="cover-container">
 		<script>document.write(getIcon(app_id, 0));</script>
 	</div>
