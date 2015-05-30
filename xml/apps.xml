@@ -15,8 +15,8 @@
         <type>app</type>
         <icon>https://raw.githubusercontent.com/DVDAndroid/UpdateChecker/master/app/src/main/res/mipmap-xxhdpi/ic_launcher_settings_l.png</icon>
         <langs>en, it</langs>
-        <versionname>5.2.2 - FINAL</versionname>
-        <versioncode>326</versioncode>
+        <versionname>5.2.3 - FINAL</versionname>
+        <versioncode>327</versioncode>
         <minapi>19</minapi>
         <targetapi>22</targetapi>
     </app>
