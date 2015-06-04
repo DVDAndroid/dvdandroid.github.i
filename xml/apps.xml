@@ -44,8 +44,8 @@
         <type>app</type>
         <icon>https://raw.githubusercontent.com/DVDAndroid/MyAppsUpdater/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png</icon>
         <langs>it, en</langs>
-        <versionname>2.1</versionname>
-        <versioncode>12</versioncode>
+        <versionname>2.1.1</versionname>
+        <versioncode>13</versioncode>
         <minapi>16</minapi>
         <targetapi>22</targetapi>
     </app>
