@@ -78,6 +78,20 @@
         <minapi>16</minapi>
         <targetapi>22</targetapi>
     </app>
+	<app>
+		<name>Headphone Listener</name>
+		<packagename>com.dvd.android.headphonelistener</packagename>
+		<downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/HeadphoneListener.apk?raw=true</downloadlink>
+		<channel>BETA</channel>
+		<github>https://github.com/DVDAndroid/HeadphoneListener</github>
+		<type>app</type>
+		<icon>https://raw.githubusercontent.com/DVDAndroid/HeadphoneListener/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
+		<langs>en</langs>
+		<versionname>1.2</versionname>
+		<versioncode>3</versioncode>
+		<minapi>16</minapi>
+		<targetapi>22</targetapi>
+	</app>
     <app>
         <name>NotificationTest</name>
         <packagename>com.dvd.android.example.notificationtest</packagename>
