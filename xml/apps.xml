@@ -87,8 +87,8 @@
 		<type>app</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/HeadphoneListener/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
-		<versionname>1.3</versionname>
-		<versioncode>4</versioncode>
+		<versionname>2.0</versionname>
+		<versioncode>10</versioncode>
 		<minapi>16</minapi>
 		<targetapi>22</targetapi>
 	</app>
