@@ -82,13 +82,13 @@
 		<name>Headphone Listener</name>
 		<packagename>com.dvd.android.headphonelistener</packagename>
 		<downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/HeadphoneListener.apk?raw=true</downloadlink>
-		<channel>BETA</channel>
+		<channel>STABLE</channel>
 		<github>https://github.com/DVDAndroid/HeadphoneListener</github>
 		<type>app</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/HeadphoneListener/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
-		<versionname>2.1</versionname>
-		<versioncode>12</versioncode>
+		<versionname>2.2</versionname>
+		<versioncode>14</versioncode>
 		<minapi>16</minapi>
 		<targetapi>22</targetapi>
 	</app>
