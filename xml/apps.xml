@@ -35,6 +35,21 @@
         <minapi>21</minapi>
         <targetapi>21</targetapi>
     </app>
+	<app>
+		<name>LockScreen Mods - Xposed</name>
+		<packagename>com.dvd.android.xposed.lockscreenmods</packagename>
+		<downloadlink>http://dl-xda.xposed.info/modules/com.dvd.android.xposed.lockscreenmods_v2_b79796.apk</downloadlink>
+		<externallink>http://repo.xposed.info/module/com.dvd.android.xposed.lockscreenmods</externallink>
+		<channel>STABLE</channel>
+		<github>https://github.com/DVDAndroid/https://github.com/DVDAndroid/Xposed-LockScreenMods</github>
+		<type>xposed-module</type>
+		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
+		<langs>en</langs>
+		<versionname>1.0.1</versionname>
+		<versioncode>2</versioncode>
+		<minapi>21</minapi>
+		<targetapi>22</targetapi>
+	</app>
     <app>
         <name>My Apps Updater</name>
         <packagename>com.dvd.android.myappsupdater</packagename>
