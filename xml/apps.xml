@@ -41,7 +41,7 @@
 		<downloadlink>http://dl-xda.xposed.info/modules/com.dvd.android.xposed.lockscreenmods_v2_b79796.apk</downloadlink>
 		<externallink>http://repo.xposed.info/module/com.dvd.android.xposed.lockscreenmods</externallink>
 		<channel>STABLE</channel>
-		<github>https://github.com/DVDAndroid/https://github.com/DVDAndroid/Xposed-LockScreenMods</github>
+		<github>https://github.com/DVDAndroid/Xposed-LockScreenMods</github>
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
@@ -64,6 +64,19 @@
         <minapi>16</minapi>
         <targetapi>22</targetapi>
     </app>
+	<app>
+		<name>Restore Shutdown Dialog Confirm - Xposed</name>
+		<packagename>com.dvd.android.xposed.restoreshutdowndialog</packagename>
+		<downloadlink>https://github.com/DVDAndroid/Xposed-RestoreShutdownDialog/blob/master/app/app-release.apk?raw=true</downloadlink>
+		<github>https://github.com/DVDAndroid/Xposed-RestoreShutdownDialog</github>
+		<type>xposed-module</type>
+		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-RestoreShutdownDialog/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
+		<langs>---</langs>
+		<versionname>1.0</versionname>
+		<versioncode>1</versioncode>
+		<minapi>21</minapi>
+		<targetapi>22</targetapi>
+	</app>
 	<app>
 		<name>Xposed Installer</name>
 		<packagename>de.robv.android.xposed.installer</packagename>
