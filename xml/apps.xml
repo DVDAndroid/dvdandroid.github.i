@@ -38,15 +38,15 @@
 	<app>
 		<name>LockScreen Mods - Xposed</name>
 		<packagename>com.dvd.android.xposed.lockscreenmods</packagename>
-		<downloadlink>http://dl-xda.xposed.info/modules/com.dvd.android.xposed.lockscreenmods_v2_b79796.apk</downloadlink>
+		<downloadlink>http://dl-xda.xposed.info/modules/com.dvd.android.xposed.lockscreenmods_v4_47920f.apk</downloadlink>
 		<externallink>http://repo.xposed.info/module/com.dvd.android.xposed.lockscreenmods</externallink>
 		<channel>STABLE</channel>
 		<github>https://github.com/DVDAndroid/Xposed-LockScreenMods</github>
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
-		<versionname>1.0.1</versionname>
-		<versioncode>2</versioncode>
+		<versionname>1.2</versionname>
+		<versioncode>4</versioncode>
 		<minapi>21</minapi>
 		<targetapi>22</targetapi>
 	</app>
@@ -72,8 +72,8 @@
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-RestoreShutdownDialog/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>---</langs>
-		<versionname>1.0</versionname>
-		<versioncode>1</versioncode>
+		<versionname>1.1</versionname>
+		<versioncode>2</versioncode>
 		<minapi>21</minapi>
 		<targetapi>22</targetapi>
 	</app>
