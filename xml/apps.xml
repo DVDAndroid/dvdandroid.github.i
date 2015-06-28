@@ -45,8 +45,8 @@
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
-		<versionname>1.2.1</versionname>
-		<versioncode>5</versioncode>
+		<versionname>1.3</versionname>
+		<versioncode>6</versioncode>
 		<minapi>21</minapi>
 		<targetapi>22</targetapi>
 	</app>
