@@ -85,7 +85,7 @@
 		<channel>STABLE</channel>
 		<github>https://github.com/DVDAndroid/XposedInstaller</github>
 		<type>app</type>
-		<icon>https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/art/app/src/main/res/drawable-xxhdpi/ic_launcher.png</icon>
+		<icon>https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/app/src/main/res/mipmap-xxhdpi/ic_launcher.png</icon>
 		<langs>it, en, de, fr, es, ....</langs>
 		<versionname>3.0 alpha4 - by dvdandroid</versionname>
 		<versioncode>37</versioncode>
