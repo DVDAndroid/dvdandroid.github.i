@@ -87,10 +87,24 @@
 		<type>app</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/app/src/main/res/mipmap-xxhdpi/ic_launcher.png</icon>
 		<langs>it, en, de, fr, es, ....</langs>
-		<versionname>3.0 alpha4 - by dvdandroid</versionname>
+		<versionname>3.0 alpha4</versionname>
 		<versioncode>37</versioncode>
 		<minapi>15</minapi>
 		<targetapi>22</targetapi>
+	</app>
+	<app>
+		<name>GitHub System Status Checker </name>
+		<packagename>com.dvd.android.githubsystemstatuschecker</packagename>
+		<downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/GitHubSystemStatusChecker.apk?raw=true</downloadlink>
+		<channel>STABLE</channel>
+		<github>https://github.com/DVDAndroid/GitHubSystemStatusChecker </github>
+		<type>app</type>
+		<icon>https://raw.githubusercontent.com/DVDAndroid/GitHubSystemStatusChecker/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
+		<langs>en</langs>
+		<versionname>1.2</versionname>
+		<versioncode>2</versioncode>
+		<minapi>15</minapi>
+		<targetapi>23</targetapi>
 	</app>
     <app>
         <name>HTMLColorDecoder</name>
