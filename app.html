@@ -76,18 +76,16 @@
 				</script>
 			</td>
 		</tr>
-		<tr>
-			<td class="table_row">External link:</td>
-			<td>
-				<script>
-					if (getExternalLink(app_id) == "N/A") {
-						document.write('<a>N/A</a>');
-					} else {
-						document.write("<a href='" + getExternalLink(app_id) + "'>" + "Click here" + '</a>');
-					}
-				</script>
-			</td>
-		</tr>
+		<script>
+			if (getExternalLink(app_id) != "N/A") {
+				document.write('<tr>');
+				document.write("<td class='table_row'>External link:</td>");
+				document.write("<td class='pointer-cursor'>");
+				document.write("<a href='" + getExternalLink(app_id) + "'>" + "Click here" + '</a>');
+				document.write("</td>");
+				document.write("</tr>");
+			}
+		</script>
 		<tr>
 			<td class="table_row">Type:</td>
 			<td class="pointer-cursor">
