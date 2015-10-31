@@ -35,6 +35,20 @@
         <minapi>21</minapi>
         <targetapi>21</targetapi>
     </app>
+    <app>
+        <name>Ambient Display Theme</name>
+        <packagename>com.dvd.android.theme.ambientdisplay</packagename>
+        <description><![CDATA[]]></description>
+        <downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/AmbientDisplayTheme.apk?raw=true</downloadlink>
+        <channel>STABLE</channel>
+        <github>https://github.com/DVDAndroid/AmbientDisplayTheme</github>
+        <type>app-theme</type>
+        <langs>---</langs>
+        <versionname>1.0</versionname>
+        <versioncode>1</versioncode>
+        <minapi>21</minapi>
+        <targetapi>23</targetapi>
+    </app>
 	<app>
 		<name>LockScreen Mods - Xposed</name>
 		<packagename>com.dvd.android.xposed.lockscreenmods</packagename>
@@ -129,10 +143,10 @@
 		<type>app</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/HeadphoneListener/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>en</langs>
-		<versionname>2.2</versionname>
-		<versioncode>14</versioncode>
+		<versionname>2.3</versionname>
+		<versioncode>15</versioncode>
 		<minapi>16</minapi>
-		<targetapi>22</targetapi>
+		<targetapi>23</targetapi>
 	</app>
     <app>
         <name>NotificationTest</name>
