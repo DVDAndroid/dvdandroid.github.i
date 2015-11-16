@@ -81,7 +81,7 @@
 	<app>
 		<name>Restore Shutdown Dialog Confirm - Xposed</name>
 		<packagename>com.dvd.android.xposed.restoreshutdowndialog</packagename>
-		<downloadlink>https://github.com/DVDAndroid/Xposed-RestoreShutdownDialog/blob/master/app/app-release.apk?raw=true</downloadlink>
+		<downloadlink>https://github.com/DVDAndroid/dvdandroid.github.io/blob/master/apks/RestoreShutdownDialog.apk?raw=true</downloadlink>
 		<github>https://github.com/DVDAndroid/Xposed-RestoreShutdownDialog</github>
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-RestoreShutdownDialog/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
