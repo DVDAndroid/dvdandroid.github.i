@@ -86,8 +86,8 @@
 		<type>xposed-module</type>
 		<icon>https://raw.githubusercontent.com/DVDAndroid/Xposed-RestoreShutdownDialog/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png</icon>
 		<langs>---</langs>
-		<versionname>1.1</versionname>
-		<versioncode>2</versioncode>
+		<versionname>1.2.1</versionname>
+		<versioncode>5</versioncode>
 		<minapi>21</minapi>
 		<targetapi>22</targetapi>
 	</app>
