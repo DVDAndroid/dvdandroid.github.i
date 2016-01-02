@@ -1,157 +1,237 @@
-<!DOCTYPE html>
-<html>
+<html style="background-color: #4CAF50">
 <head>
-	<link href='css/webpage_app_style.css' rel='stylesheet' type='text/css'>
-	<link href="css/materialize.min.css" rel="stylesheet" type="text/css" media="screen,projection"/>
-	<meta name="viewport"
-	      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-	<meta name="theme-color" content="#4CAF50">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript"
-	        src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/showBottomCredits.js"></script>
-	<script type="text/javascript" src="xml/xmlHelper.js"></script>
-	<script type="text/javascript" src="src/ZeroClipboard.js"></script>
-	<script language="JavaScript">
-		var parameters = location.search.substring(1).split("&");
-		var temp = parameters[0].split("=");
-		var app_id = unescape(temp[1]);
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#4CAF50">
+    <meta content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" name="viewport">
+    <link rel="stylesheet" href="css/tidy.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/ScrollSpy.js"></script>
+    <script src="xml/xmlHelper.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link href="css/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles"/>
+    <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <script language="JavaScript">
+        var parameters = location.search.substring(1).split("&");
+        var temp = parameters[0].split("=");
+        var app_id = unescape(temp[1]);
+        var appsNumber = getLength() - 1;
+        var ok = false;
 
-		switch (app_id) {
-			case "undefined":
-			case "":
-			case app_id < 0:
-			//TODO: change this number every new app
-			case  app_id > 10:
-			//TODO: change this number every new app
-			case isNaN(app_id):
-				document.title = "404 - Not Found | DVDAndroid";
-				window.location = "404_not_found.html";
-				break;
-			default:
-				document.title = getName(app_id) + " | DVDAndroid";
-		}
-		new ScrollSpy({
-			mode: 'horizontal',
-			container: window
-		});
-	</script>
+        if (isNaN(app_id)) {
+            for (var i = 0; i < appsNumber; i++) {
+                if (getPackageName(i) == app_id) {
+                    setAppId(i);
+                    ok = true;
+                    break;
+                } else {
+                    ok = false;
+                }
+            }
+            if (!ok) {
+                goto404();
+            }
+        } else {
+            if (parseInt(app_id) > appsNumber || parseInt(app_id) < 0) {
+                goto404();
+            } else {
+                setAppId(app_id);
+                document.title = getName() + " | DVDAndroid";
+            }
+        }
+        document.title = getName() + " | DVDAndroid";
+
+        new ScrollSpy({
+            mode: 'horizontal',
+            container: window
+        });
+
+        function goto404() {
+            document.title = "404 - Not Found | DVDAndroid";
+            window.location = "404.html";
+        }
+    </script>
 </head>
-<body class="green">
-<div class="my-container z-depth-3" style="background: white">
-	<noscript class="red">
-		WARNING!! JAVASCRIPT IS NOT ENABLED!!
-	</noscript>
-	<div class="cover-container">
-		<script>document.write(getIcon(app_id, 0));</script>
-	</div>
-	<div class="info-box-top z-depth-1">
-		<h1 class="document-title">
-			<script>document.write(getName(app_id));</script>
-		</h1>
-	</div>
-	<table class="bordered hoverable"> <!-- responsive-table -->
-		<tr>
-			<td class="table_row">Name:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getName(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Package name:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getPackage_name(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">GitHub:</td>
-			<td>
-				<script>
-					if (getGithub(app_id) == "N/A") {
-						document.write('<a>N/A</a>');
-					} else {
-						document.write("<a class='tooltipped' data-position='right' data-delay='50' data-tooltip='View this project on GitHub!' href='" + getGithub(app_id) + "'>" + "Click here" + '</a>');
-					}
-				</script>
-			</td>
-		</tr>
-		<script>
-			if (getExternalLink(app_id) != "N/A") {
-				document.write('<tr>');
-				document.write("<td class='table_row'>External link:</td>");
-				document.write("<td class='pointer-cursor'>");
-				document.write("<a href='" + getExternalLink(app_id) + "'>" + "Click here" + '</a>');
-				document.write("</td>");
-				document.write("</tr>");
-			}
-		</script>
-		<tr>
-			<td class="table_row">Type:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getType(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Available languages:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getLangs(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Version name:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getVersion_name(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Version code:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getVersion_code(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Minimum Android API:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getMinApi(app_id))</script>
-			</td>
-		</tr>
-		<tr>
-			<td class="table_row">Target Android API:</td>
-			<td class="pointer-cursor">
-				<script>document.write(getTargetApi(app_id))</script>
-			</td>
-		</tr>
-	</table>
-	<a class="btn-floating btn-large waves-effect waves-light green.darken-2 tooltipped"
-	   data-position="top" data-delay="50" data-tooltip="Download" id="float_butt">
-		<script>
-			document.getElementById("float_butt").href = getDownload(app_id);
-		</script>
-		<i class="mdi-file-file-download"></i>
-	</a>
+<body style="background-color: #4CAF50;">
+<div id="main-container">
+    <div style="width: 100%; background-color: #4CAF50">
+        <div class="wow fadeInUp content-card">
+            <div class="icon-and-title-flex">
+                <script>
+                    document.write("<img src='" + getIcon() + "' class='appicon'/>");
+                </script>
+
+                <div class="title-container">
+                <span class="text-title">
+                    <script>document.write(getName());</script>
+                </span>
+                    <br>
+
+                    <div class="intertext-padding"></div>
+                <span class="text-subtitle">
+                    <script>document.write("by " + getDev());</script>
+                </span>
+                    <br>
+
+                    <div class="intertext-padding"></div>
+                </div>
+            </div>
+            <br><br>
+        <span class="text-description" style="font-size: 1.1em">
+            <script>
+                if (isDefined(getDescription())) document.write(getDescription());
+            </script>
+        </span>
+        </div>
+    </div>
+
+    <div class="wow fadeInUp content-works">
+        <script>
+            for (var i = 0; i < getScreenshotNumber(); i++) {
+                var t = "";
+                if (getScreenshotTitle(i) != "null") t = "title='" + getScreenshotTitle(i) + "'";
+
+                document.write("<div class='screenshot-item'" + t + ">");
+                document.write("<a href='" + getScreenshot(i) + "' data-featherlight='image'>");
+                document.write("<img src='" + getScreenshot(i) + "'>");
+                document.write("</a>");
+                document.write("</div>");
+            }
+        </script>
+    </div>
+
+    <div class="wow fadeInUp content-card" style="margin-top: 0;">
+        <span class="text-subtitle" style="font-size: 2em; font-weight: 300; color: #333">Details</span>
+        <br><br>
+
+        <div>
+            <script>
+                if (isDefined(getType())) {
+                    document.write("<div class='detail-item'>");
+                    document.write("<iron-icon class='details-icon' icon='dashboard'></iron-icon>");
+                    document.write("<span class='text-description'>");
+                    document.write("Type: " + getType());
+                    document.write("</span>");
+                    document.write("</div>")
+                }
+                if (isDefined(getLangs()) && getLangs() != "---") {
+                    document.write("<div class='detail-item'>");
+                    document.write("<iron-icon class='details-icon' icon='language'></iron-icon>");
+                    document.write("<span class='text-description'>");
+                    document.write("Languages: " + getLangs());
+                    document.write("</span>");
+                    document.write("</div>")
+                }
+            </script>
+            <div class="detail-item">
+                <iron-icon class="details-icon" icon="info"></iron-icon>
+            <span class="text-description">
+                Version: <script>document.write(getVersionName() + " (" + getVersionCode() + ")" + " - " + getChannel());</script>
+            </span>
+            </div>
+            <div class="detail-item">
+                <iron-icon class="details-icon" icon="android"></iron-icon>
+                <script>
+                    document.write("<span class='text-description' style='cursor: help;' title='API: " + getMinApi() + "'>");
+                    document.write("Android Version: " + getAndroidVersion(getMinApi()) + "+");
+                    document.write("</span>")
+                </script>
+            </div>
+            <div class="detail-item">
+                <iron-icon class="details-icon" icon="launch"></iron-icon>
+            <span class="text-description" style="overflow:hidden; text-overflow-multiline:ellipsis;">
+                Package name: <script>document.write(getPackageName());</script>
+            </span>
+            </div>
+            <script>
+                if (isDefined(getGithub())) {
+                    document.write("<div class='detail-item'>");
+                    document.write("<iron-icon class='details-icon' icon='code'></iron-icon>");
+                    document.write("<span class='text-description'>");
+                    document.write("<a href='" + getGithub() + "'>Get source code!</a>");
+                    document.write("</span>");
+                    document.write("</div>")
+                }
+                if (isDefined(getExternalLink())) {
+                    document.write("<div class='detail-item'>");
+                    document.write("<iron-icon class='details-icon' icon='link'></iron-icon>");
+                    document.write("<span class='text-description'>");
+                    document.write("<a href='" + getExternalLink() + "'>Open external link</a>");
+                    document.write("</span>");
+                    document.write("</div>")
+                }
+                if (isDefined(getDownloadNumber())) {
+                    document.write("<div class='detail-item'>");
+                    document.write("<iron-icon class='details-icon' icon='assessment'></iron-icon>");
+                    document.write("<span class='text-description'>");
+                    document.write(getDownloadNumber() + " downloads");
+                    document.write("</span>");
+                    document.write("</div>")
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="empty-space">
+        <div class="meta-container wow fadeInUp">
+            <div class="wow fadeInUp detail-item watermark credits">
+            <span class="text-description credits-text" style="color: #ffffff">
+                Template by <a href="http://faizmalkani.com" style="color: #fff; font-weight: 700">Faiz Malkani</a>
+            </span>
+            </div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 10%; right: 5%">
+        <script>
+            if (isDefined(getDownload())) {
+                document.write("<a href='" + getDownload() + "'>");
+                document.write("<paper-fab class='wow fadeInUp desktop-fab' icon='cloud-download'></paper-fab>");
+                document.write("</a>")
+            }
+        </script>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+
+        $(function () {
+            var $window = $(window);
+            var scrollTime = 0.2;
+            var scrollDistance = 270;
+            $window.on("mousewheel DOMMouseScroll", function (event) {
+
+                event.preventDefault();
+                var delta = event.originalEvent.wheelDelta / 120 || -event.originalEvent.detail / 3;
+                var scrollTop = $window.scrollTop();
+                var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+                TweenMax.to($window, scrollTime,
+                        {
+                            scrollTo: {y: finalScroll, autoKill: true}, ease: Power1.easeOut, overwrite: 5
+
+                        });
+            });
+        });
+    </script>
 </div>
-<div class="z-depth-2 bottom-div" id="bottom">
-	Powered by <a href="https://pages.github.com/">Github Pages</a>
-	<a href="https://github.com/DVDAndroid" style="padding-left: 5%">DVDAndroid</a>
-</div>
-<script type="text/javascript">
-	var client = new ZeroClipboard($('.textCopy'));
+<noscript>
+    <div class="content-card content-card2" style="text-align: center">
+        <img src="res/ic_warning_amber.png">
 
-	client.on('ready', function () {
-		client.on('copy', function (event) {
-			event.clipboardData.setData('text/plain', event.target.innerText);
-		});
+        <h2>JavaScript is not enabled. Please enable it to continue</h2>
+    </div>
 
-		client.on('aftercopy', function (event) {
-			Materialize.toast('Copied text to clipboard: ' + event.data['text/plain'], 4000);
-		});
-	});
-
-	client.on('error', function () {
-		ZeroClipboard.destroy();
-	});
-</script>
-<script type="text/javascript" src="js/showBottomCredits.js">checkBottomVisibility();</script>
+    <style>
+        #main-container {
+            display: none;
+        }
+    </style>
+</noscript>
 </body>
-</html>
+</html>	
