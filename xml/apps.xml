@@ -95,7 +95,7 @@
 	<app>
 		<name>Xposed Installer</name>
 		<packagename>de.robv.android.xposed.installer</packagename>
-		<downloadlink>http://forum.xda-developers.com/devdb/project/dl/?id=19328&task=get</downloadlink>
+		<downloadlink>http://forum.xda-developers.com/devdb/project/dl/?id=19329&task=get</downloadlink>
 		<externallink>https://github.com/rovo89/XposedInstaller/tree/art</externallink>
 		<channel>STABLE</channel>
 		<github>https://github.com/DVDAndroid/XposedInstaller</github>
