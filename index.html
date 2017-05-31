@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>dvdandroid's website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+
+    <!-- scripts -->
+    <script src="bower_components/material-design-lite/material.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="icon" type="image/png" href="res/web.png">
+</head>
+<body>
+<div id="body">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div>
+                    <div class="mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+                        <div class="bar"></div>
+                        <main class="topmargin mdl-layout__content">
+                            <div class="container mdl-grid">
+                                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                                <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                                    <h3>About me</h3>
+                                    <p>Hi! My name is Davide and I'm Italian. I <i class="material-icons">favorite</i> Android.
+                                        I learned Java myself and I use it to develop Android apps.
+                                        Other languages I know are: Kotlin, HTML, Javascript and a little of C# and PHP</p>
+                                    <br><br>
+
+                                    <div style="text-align: center">
+                                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="xda">
+                                            <img src="res/xda.svg"> XDA Forums
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="github">
+                                            <img src="res/github.svg"> Github
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="xposed">
+                                            <img src="res/xposed.svg"> Xposed Repo
+                                        </button>
+                                    </div>
+
+                                    <br><br>
+                                    <h3>Projects</h3>
+                                    <div id="projects"></div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<script>
+  loadJSON(function () {
+    var html = "";
+
+    $.each(jsonData, function (key, val) {
+      html += createCard(key, val);
+    });
+
+    $("#projects").html(html);
+  });
+
+  $("#xda").click(function () {
+    window.open("http://forum.xda-developers.com/member.php?u=5345056", "_blank");
+  });
+  $("#github").click(function () {
+    window.open("http://github.com/dvdandroid", "_blank");
+  });
+  $("#xposed").click(function () {
+    window.open("http://repo.xposed.info/users/dvdandroid", "_blank");
+  });
+</script>
+<noscript>
+    <style>
+        #body {
+            display: none
+        }
+    </style>
+
+    <h1>Javascript is disabled</h1>
+</noscript>
+</body>
+</html>
