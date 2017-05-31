@@ -1,0 +1,263 @@
+{
+  "apps": {
+    "title": "Android Apps",
+    "description": "Here's a list of my Android Apps",
+    "icon": "./res/android.png",
+    "list": [
+      {
+        "name": "Update Checker",
+        "description": "My first app used to check updates on my Nexus 5",
+        "packageName": "com.dvd.android.updatechecker",
+        "downloadLink": "https://github.com/dvdandroid/dvdandroid.github.io/blob/master/apks/UpdateChecker.apk?raw=true",
+        "github": "https://github.com/dvdandroid/UpdateChecker",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/UpdateChecker/master/app/src/main/res/mipmap-xxhdpi/ic_launcher_settings_l.png",
+        "langs": "Italian, English",
+        "version": "5.2.3 - FINAL - 327"
+      },
+      {
+        "name": "Xposed Installer",
+        "description": "Materialised Xposed Installer",
+        "packageName": "de.robv.android.xposed.installer",
+        "downloadLink": "https://forum.xda-developers.com/devdb/project/dl/?id=24495&task=get",
+        "screenshots": [
+          {
+            "title": "Main activity",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/art/Phone_Installed.png"
+          },
+          {
+            "title": "About",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/art/Phone_About.png"
+          },
+          {
+            "title": "Download activity",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/art/Phone_DownloadList.png"
+          },
+          {
+            "title": "Settings activity",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/XposedInstaller/material/art/Phone_Settings.png"
+          }
+        ],
+        "github": "https://github.com/dvdandroid/XposedInstaller/",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/XposedInstaller/material/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "langs": "Italian, English, French, ... +35",
+        "version": "3.0.1 by dvdandroid - 29/04/17 - 37"
+      },{
+        "name": "MagiskManager",
+        "description": "Install, upgrade, manage, configure the Universal Systemless Interface - Magisk within a single app!",
+        "packageName": "com.topjohnwu.magisk",
+        "downloadLink": "https://play.google.com/store/apps/details?id=com.topjohnwu.magisk",
+        "screenshots": [
+          {
+            "title": "Main activity",
+            "url": "https://lh3.googleusercontent.com/dIZVscph_QD6TsA1JzGXeXZEb6pWxVglEhWYvKiuYiU1HUPStFlnJymBdkmDbYkzsvs=h900-rw"
+          },
+          {
+            "title": "Install activity",
+            "url": "https://lh3.googleusercontent.com/scbO71BDVZFM2isYQfBKZQxjQ9Bd6u6iK0crp08P9nzPunAMkavhrCi_5cPNCV4pdVE=h900-rw"
+          },
+          {
+            "title": "Modules activity",
+            "url": "https://lh3.googleusercontent.com/DA2QoXLX2pydn7Sr9aCxaDODyU3vsFLDL1orH-F-HmOxDYphcs1XISTfkvoQxJYOLg=h900-rw"
+          },
+          {
+            "title": "Downloads activity",
+            "url": "https://lh3.googleusercontent.com/AJL9Ft2MnNswNZqb_36fzGv8Wovuuo3nlxskZaeHLrhDnMnhN757EhC90DjGlTu_wA=h900-rw"
+          }
+        ],
+        "github": "https://github.com/topjohnwu/MagiskManager",
+        "icon": "https://raw.githubusercontent.com/topjohnwu/MagiskManager/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "langs": "English, ..",
+        "version": "4.3.3"
+      },
+      {
+        "name": "HeadphoneListener",
+        "description": "Simple app to open player when headphones are plugged in",
+        "packageName": "com.dvd.android.headphonelistener",
+        "downloadLink": "https://github.com/dvdandroid/dvdandroid.github.io/blob/master/apks/HeadphoneListener.apk?raw=true",
+        "github": "https://github.com/dvdandroid/HeadphoneListener",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/HeadphoneListener/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "langs": "Italian, English",
+        "version": "2.3 - 15"
+      },
+      {
+        "name": "HTMLColorDecoder",
+        "description": "Simple app to decode HTML colors",
+        "packageName": "com.dvd.android.example.htmlcolordecoder",
+        "downloadLink": "https://github.com/dvdandroid/dvdandroid.github.io/blob/master/apks/HeadphoneListener.apk?raw=true",
+        "github": "https://github.com/dvdandroid/HeadphoneListener",
+        "langs": "Italian, English",
+        "version": "1.0 - 1"
+      },
+      {
+        "name": "Enable Ambient Display - Xposed",
+        "description": "Xposed module which enables Ambient Display",
+        "packageName": "com.dvd.android.xposed.enableambientdisplay",
+        "downloadLink": "http://dl-xda.xposed.info/modules/com.dvd.android.xposed.enableambientdisplay_v3_405aea.apk?raw=true",
+        "screenshots": [
+          {
+            "title": "Ambient display",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-EnableAmbientDisplay/master/screenshots/ambient-display.png"
+          },
+          {
+            "title": "Main activity",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-EnableAmbientDisplay/master/screenshots/main_activity.png"
+          },
+          {
+            "title": "Settings",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-EnableAmbientDisplay/master/screenshots/settings.png"
+          }
+        ],
+        "externalLink": "http://repo.xposed.info/module/com.dvd.android.xposed.enableambientdisplay",
+        "github": "https://github.com/dvdandroid/Xposed-EnableAmbientDisplay",
+        "langs": "Italian, English",
+        "version": "1.2 - 3"
+      },
+      {
+        "name": "Xposed-ScreenshotAutoDemoMode",
+        "description": "Xposed module which turns on Android Demo mode when taking a screenshot. Written in Kotlin",
+        "packageName": "com.dvd.android.xposed.screenshotautodemomode",
+        "downloadLink": "",
+        "github": "https://github.com/dvdandroid/Xposed-ScreenshotAutoDemoMode/blob/master/app/build.gradle",
+        "version": "1.2 - 3"
+      },
+      {
+        "name": "LockScreen Mods - Xposed",
+        "description": "Xposed module which allows modding lockscreen",
+        "packageName": "com.dvd.android.xposed.lockscreenmods",
+        "downloadLink": "http://dl-xda.xposed.info/modules/com.dvd.android.xposed.lockscreenmods_v4_47920f.apk",
+        "screenshots": [
+          {
+            "title": "Main activity",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/screenshots/Screenshot_2015-06-23-10-04-31.png"
+          },
+          {
+            "title": "Lockscreen",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-LockScreenMods/master/screenshots/Screenshot_2015-06-23-10-04-37.png"
+          }
+        ],
+        "externalLink": "http://repo.xposed.info/module/com.dvd.android.xposed.lockscreenmods",
+        "github": "https://github.com/dvdandroid/Xposed-LockScreenMods",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/Xposed-LockScreenMods/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "langs": "English",
+        "version": "1.5 - 8"
+      },
+      {
+        "name": "Restore Shutdown Dialog Confirm - Xposed",
+        "description": "Xposed module which restores the shutdown dialog on Android 5+",
+        "packageName": "com.dvd.android.xposed.restoreshutdowndialog",
+        "downloadLink": "http://dl-xda.xposed.info/modules/com.dvd.android.xposed.restoreshutdowndialog_v6_24400d.apk",
+        "externalLink": "http://repo.xposed.info/module/com.dvd.android.xposed.restoreshutdowndialog",
+        "screenshots": [
+          {
+            "title": "Dialog",
+            "url": "https://raw.githubusercontent.com/DVDAndroid/Xposed-RestoreShutdownDialog/master/screenshots/Screenshot_2015-06-25-16-01-05.png"
+          }
+        ],
+        "github": "https://github.com/dvdandroid/Xposed-RestoreShutdownDialog",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/Xposed-RestoreShutdownDialog/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "version": "1.2.1 - 5 "
+      },
+      {
+        "name": "GitHubSystemStatusChecker",
+        "description": "Small app to check the status of Github servers",
+        "packageName": "com.dvd.android.githubsystemstatuschecker",
+        "downloadLink": "https://github.com/dvdandroid/dvdandroid.github.io/blob/master/apks/GitHubSystemStatusChecker.apk?raw=true",
+        "github": "https://github.com/dvdandroid/GitHubSystemStatusChecker/",
+        "icon": "https://raw.githubusercontent.com/dvdandroid/GitHubSystemStatusChecker/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+        "langs": "English",
+        "version": "1.2 - 2"
+      }
+    ]
+  },
+  "idea_plugins": {
+    "title": "IDEA plugins",
+    "description": "Here's a list of my IDEA plugins",
+    "icon": "./res/java.png",
+    "list": [
+      {
+        "name": "material-color-palette-plugin",
+        "description": "Android Studio & Intellij IDEA plugin that adds a material palette in your project screen",
+        "downloadLink": "https://plugins.jetbrains.com/plugin/download?updateId=32200",
+        "screenshots": [
+          {
+            "url": "https://raw.githubusercontent.com/DVDAndroid/material-color-palette-plugin/master/art/screen1.png"
+          }
+        ],
+        "github": "https://github.com/dvdandroid/material-color-palette-plugin/",
+        "version": "1.2"
+      },
+      {
+        "name": "android-material-design-icon-generator-plugin",
+        "description": "Plugin that allows importing material design icons",
+        "downloadLink": "https://plugins.jetbrains.com/plugin/download?updateId=28423",
+        "github": "https://github.com/konifar/android-material-design-icon-generator-plugin",
+        "version": "1.2"
+      }
+    ]
+  },
+  "stylish": {
+    "title": "Stylish",
+    "description": "Here's a list of my Stylish themes",
+    "icon": "./res/stylish.png",
+    "list": [
+      {
+        "name": "GitHubMaterialDesign",
+        "description": "Github in Material Design with a Stylish theme",
+        "downloadLink": "https://userstyles.org/styles/123952/github-material-design",
+        "github": "https://github.com/dvdandroid/GitHubMaterialDesign",
+        "version": "February 28, 2017"
+      }
+    ]
+  },
+  "chrome_ext": {
+    "title": "Chrome extensions",
+    "description": "Here's a list of Chrome extensions",
+    "icon": "./res/chrome_ext.png",
+    "list": [
+      {
+        "name": "AndroidSDKSearchExtension",
+        "description": "A Chrome extension that adds an 'ad' omnibox command and view source links for the Android SDK.",
+        "downloadLink": "https://chrome.google.com/webstore/detail/android-sdk-search/hgcbffeicehlpmgmnhnkjbjoldkfhoin?hl=en",
+        "github": "https://github.com/romannurik/AndroidSDKSearchExtension"
+      },
+      {
+        "name": "hops",
+        "description": "An extension for Google Chrome to browse through the code just like you'd do in your IDE.",
+        "downloadLink": "https://chrome.google.com/webstore/detail/hops/bbcefpmcbekfkncmcpbkkmdjkkdkkogi",
+        "github": "https://github.com/droidchef/hops"
+      }
+    ]
+  },
+  "c_sharp": {
+    "title": "C# projects",
+    "description": "Here's a list of my C# projects",
+    "icon": "./res/csharp.png",
+    "list": [
+      {
+        "name": "PrintScreenUtility",
+        "description": "Utility in C# which ask for save location when a capture screen is made",
+        "downloadLink": null,
+        "github": "https://github.com/DVDAndroid/PrintScreenUtility",
+        "version":"1.0"
+      }
+    ]
+  },
+  "html": {
+    "title": "HTML projects",
+    "description": "Here's a list of my HTML projects",
+    "icon": "./res/web.png",
+    "list": [
+      {
+        "name": "vector2svg",
+        "description": "This project allows to convert a Android Vector image into a SVG one",
+        "demo": "https://dvdandroid.github.io/vector2svg",
+        "github": "https://github.com/DVDAndroid/vector2svg",
+        "screenshots": [
+          {
+            "url": "https://raw.githubusercontent.com/DVDAndroid/vector2svg/gh-pages/screenshot.png"
+          }
+        ]
+      }
+    ]
+  }
+}
